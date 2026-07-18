@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Contenido TikTok</title>
+<meta charset="UTF-8">
+<title>Detrás de los Muros – Galería</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Bienvenido a Contenido TikTok</h1>
-  <p>Este sitio contiene los documentos oficiales de la aplicación.</p>
-  <ul>
-    <li><a href="terms.html">Términos de servicio</a></li>
-    <li><a href="privacy.html">Política de privacidad</a></li>
-  </ul>
+
+<header>
+  <h1>Detrás de los Muros</h1>
+  <p>Arquitectura • Ciudades perdidas • Misterios • Historias reales</p>
+</header>
+
+<section id="gallery"></section>
+
+<script>
+fetch('data/videos.json')
+  .then(response => response.json())
+  .then(videos => {
+    const gallery = document.getElementById('gallery');
+    videos.forEach(video => {
+      const card = document.createElement('a');
+      card.href = video.page;
+      card.className = 'video-card ' + video.format;
+      card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}">
+        <h3>${video.title}</h3>
+      `;
+      gallery.appendChild(card);
+    });
+  });
+</script>
+
 </body>
 </html>
