@@ -1,1 +1,15 @@
+[
+  {
+    "title": "Ejemplo Vertical – Ciudad Perdida",
+    "thumbnail": "/thumbnails/vertical/ejemplo_vertical.jpg",
+    "page": "/videos/vertical/ejemplo_vertical.html",
+    "format": "vertical"
+  },
+  {
+    "title": "Ejemplo Horizontal – Misterio Arquitectónico",
+    "thumbnail": "/thumbnails/horizontal/ejemplo_horizontal.jpg",
+    "page": "/videos/horizontal/ejemplo_horizontal.html",
+    "format": "horizontal"
+  }
+]
 
